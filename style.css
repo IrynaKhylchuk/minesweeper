@@ -1,0 +1,396 @@
+/* Fonts */
+
+@font-face {
+    font-family: clock;
+    src: url(fonts/digital-7\ \(mono\).ttf);
+}
+
+/*#region Main */
+body {
+    width: 100%;  
+    height: 100vh;  
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.windowShow {
+    background: url(images/background-open.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.windowHide {
+    background: url(images/background-hide.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.windowClose {
+    background: url(images/background-close.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*#endregion */
+
+/*#region Icon Minesweeper */
+
+.iconMinesweeper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconMinesweeper img{
+    display: block;
+    width: 50px;
+    height: auto;
+}
+
+.iconMinesweeper span {
+    color: white;
+    font-weight: 500;
+}
+
+/* Window */
+
+.window {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #0831d9;
+    border-top:  1px solid #0831d9;
+    border-radius: 3px;
+    background-color: #c0c0c0;
+    width: auto;
+}
+
+/*#endregion */
+
+/* #region Header */
+
+.header {
+    background: rgb(3,114,255);
+    background: linear-gradient(180deg, rgba(3,114,255,1) 0%, rgba(0,82,222,1) 22%, rgba(0,77,227,1) 80%, rgba(3,114,255,1) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.logo {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+
+.logo img {
+    width: 17px;
+    height: auto;
+}
+
+.logo h1 {
+    margin: 0 0 0 2px;
+    padding: 0;
+    color: white;
+    font-size: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.btnGroup {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.btnGroup button {
+    width: 21px;
+    height: 21px;
+    margin: 0 1px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* #endregion Header */
+
+/* #region Topnav */
+
+.topnav {
+    margin: 3px 0 8px;
+}
+
+.topnavList {
+    display: flex;
+    font-size: 12px;
+}
+
+.topnav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topnav span:hover {
+    color: blue;
+}
+
+.topnavList li:first-child {
+    margin-right: 5px;
+}
+.topnavList li:nth-of-type(2) {
+    margin: 0 5px;
+}
+.topnavList li:last-child {
+    margin-left: 5px;
+}
+
+.gameList, 
+.helpList,
+.optionsList {
+    display: none;
+}
+
+/* #endregion Topnav */
+
+/* #region Dropdown */
+
+.gameList,
+.helpList,
+.optionsList {
+    display: none;
+    position: absolute;
+    width: auto;
+    background-color: #c0c0c0;
+    border: 5px double grey;
+    z-index: 1;
+}
+
+.gameList li:hover,
+.helpList li:hover,
+.optionsList li:hover {
+    color: blue;
+}
+
+.dropdown:hover .gameList, 
+.dropdown:hover .helpList,
+.dropdown:hover .optionsList {
+    display: block;
+}
+
+#goodJob {
+    display: none;
+    width: 150px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c0c0c0;
+    text-align: center;
+    border: 3px solid #0831d9;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.naruto {
+    width: 130px;
+}
+
+/* #endregion Dropdown */
+
+/* #region Game List */
+
+.gameList li {
+    display: block;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+.gameList li:first-child {
+    margin: 0;
+    padding: 0 0 9px 7px;
+    border-bottom: 2px inset lightgray;
+}
+
+#lvlBeginner,
+#lvlIntermediate,
+#lvlExpert {
+    margin: 0;
+    padding-left: 7px;
+}
+
+#lvlBeginner {
+    margin-top: 3px;
+}
+
+#lvlExpert {
+    padding-bottom: 20px;
+    border-bottom: 2px inset lightgray;
+}
+
+.gameList li:nth-child(5),
+.gameList li:nth-child(6) {
+    padding-left: 7px;
+}
+
+.gameList li:nth-child(5) {
+    padding-top: 6px;
+}
+
+.gameList li:nth-child(6) {
+    padding-bottom: 6px;
+    border-bottom: 2px inset lightgray;
+}
+
+.gameList li:last-child {
+    padding: 6px 0 0 7px;
+    margin: 0;
+}
+
+/* #endregion Game List */
+
+/* #region Options */
+
+.optionsList li:nth-child(2),
+.optionsList li:last-child {
+    margin: 0;
+}
+
+.optionsList li {
+    padding-left: 7px;
+}
+
+/* #endregion Options */
+
+/* #region Help */
+
+.helpList {
+    width: auto;
+}
+
+.helpList li:first-child {
+    margin: 0;
+    padding: 0 0 7px 5px;
+    border-bottom: 2px inset lightgray;
+}
+
+.helpList li:last-child {
+    margin: 0;
+    padding: 5px 0 0 5px;
+}
+
+/* #endregion Help */
+
+/* #region Top Panel */
+
+.topPanel {
+    display: flex;
+    justify-content: space-between;
+}
+
+#smileBtn {
+    width: 25px;
+    height: 25px;
+    border: 3px outset #ffffff;
+    background-color: #bdbdbd;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.smileDefault {
+    background: url(images/smileDefault.png);
+}
+
+.smileWin {
+    background: url(images/smileWin.png);
+}
+.smileLose {
+    background: url(images/smileLose.png);
+}
+
+.counter {
+    display: inline-block;
+    min-width: 30px;
+    background: #333;
+    color: #ec433c;
+    text-shadow: 0 0 2px #ec433c;
+    border: 3px inset;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-family: clock;
+    font-weight: bold;
+    text-align: right;
+}
+/* #endregion Top Panel */
+
+/* #region Game Container */
+
+.container {
+    padding: 8px 13px;
+}
+
+.gameContainer {
+    padding: 6px;
+    border: 2px outset white;
+}
+
+.topPanel {
+    margin-bottom: 3px;
+    border: 2px inset;
+}
+
+#gameField {
+    margin-top: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 2px inset;
+}
+
+.gameBtn {
+    height: 20px;
+    padding: 0;
+    display: block;
+    background-color: #bdbdbd;
+    font-size: 10px;
+    font-weight: bolder;
+    border: 3px outset lightgray;
+}
+
+#gameField button:active {
+    border: 3px inset lightgray;
+}
+
+.gameLvlBegginer {
+    grid-template-columns: repeat(9, 20px)
+}
+
+.gameLvlIntermediate {
+    grid-template-columns: repeat(16, 20px)
+}
+.gameLvlExpert {
+    grid-template-columns: repeat(30, 20px)
+}
+
+.clickedBtn {
+    background-color: #bdbdbd;
+    border: 1px solid #7b7b7b;
+}
+
+/* #endregion Game Container */

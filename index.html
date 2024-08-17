@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body class="windowShow">
+    <div class="iconMinesweeper">
+      <img src="images/Minesweeper_2001.png" alt="icon" />
+      <span id="iconSpan">Mineswepeer</span>
+    </div>
+
+    <div id="programWindow" class="window">
+      <div class="header">
+        <div class="logo">
+          <img src="images/Minesweeper_2001.png" alt="logo" />
+          <h1>Minesweeper</h1>
+        </div>
+        <div class="btnGroup">
+          <button type="button" id="btnMinWindow">
+            <img src="images/minWindow.png" alt="minWindow" />
+          </button>
+          <button type="button">
+            <img src="images/window.png" alt="window" />
+          </button>
+          <button type="button" id="btnCloseWindow">
+            <img src="images/closeWindow.png" alt="closeWindow" />
+          </button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="topnav">
+          <ul class="topnavList">
+            <li class="dropdown">
+              <span>Game</span>
+              <ul class="gameList">
+                <li id="newGame">New</li>
+                <li id="lvlBeginner">Beginner</li>
+                <li id="lvlIntermediate">Intermediate</li>
+                <li id="lvlExpert">Expert</li>
+                <li id="personalBest">Personal Best</li>
+                <li id="worldChamps">World Champs</li>
+                <li id="exit">Exit</li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <span>Options</span>
+              <ul class="optionsList">
+                <li>Opening Move</li>
+                <li>Marks (?)</li>
+                <li>Area Open</li>
+                <li>Open Remaining</li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <span>Help</span>
+              <ul class="helpList">
+                <li>About</li>
+                <li>Instructions</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="gameContainer">
+          <div class="topPanel">
+            <div>
+              <div id="minesCounter" class="counter"></div>
+              <div id="cellsCounter" class="counter"></div>
+            </div>
+            <div class="smile">
+              <button type="button" id="smileBtn" class="smileDefault"></button>
+            </div>
+            <div id="timer" class="counter"></div>
+          </div>
+
+          <div id="gameField"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="goodJob">
+      <div class="header">
+        <div class="logo">
+          <img src="images/Minesweeper_2001.png" alt="logo" />
+          <h1>Hello!</h1>
+        </div>
+        <div class="btnGroup">
+          <button type="button" id="btnMinWindowNaruto">
+            <img src="images/minWindow.png" alt="minWindow" />
+          </button>
+          <button type="button">
+            <img src="images/window.png" alt="window" />
+          </button>
+          <button type="button" id="btnCloseWindowNaruto">
+            <img src="images/closeWindow.png" alt="closeWindow" />
+          </button>
+        </div>
+      </div>
+      <img
+        src="images/e798602f4d0242305ff1853e20e01395.png"
+        alt="Goog job!"
+        class="naruto"
+      />
+      <h2>Good job!</h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
